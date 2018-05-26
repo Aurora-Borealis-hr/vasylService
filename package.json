@@ -1,0 +1,30 @@
+{
+  "name": "service",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "start": "node ./index.js",
+    "dev": "nodemon ./index.js",
+    "test": "mocha"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/Aurora-Borealis-hr/vasylService.git"
+  },
+  "keywords": [
+    "service",
+    "web-service"
+  ],
+  "author": "Vasyl Nesterenko",
+  "license": "ISC",
+  "dependencies": {
+    "chai": "^4.1.2",
+    "koa": "^2.5.1",
+    "mocha": "^5.2.0",
+    "nodemon": "^1.17.5"
+  },
+  "devDependencies": {
+    "supertest": "^3.1.0"
+  }
+}
