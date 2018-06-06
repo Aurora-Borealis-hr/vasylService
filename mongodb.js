@@ -1,6 +1,6 @@
 const mongoose = require('mongoose')
 
-mongoose.connect('mongodb://localhost/videoService')
+mongoose.connect('mongodb://localhost:1234/videoService')
 const Video = mongoose.model('Video', {
   name: String,
   description: String,
@@ -10,7 +10,7 @@ const Video = mongoose.model('Video', {
 
 const Tag = mongoose.model('Tag', {
   name: String,
-
+  numOfVideos: Number,
 });
 
 const Chanel = mongoose.model('Chanel', {
