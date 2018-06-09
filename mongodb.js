@@ -1,6 +1,6 @@
 const mongoose = require('mongoose')
 
-mongoose.connect('mongodb://localhost:1234/videoService')
+mongoose.connect('mongodb://54.86.208.130:80/videoService')
 const Video = mongoose.model('Video', {
   name: String,
   description: String,
