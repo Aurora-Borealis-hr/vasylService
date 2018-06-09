@@ -3,17 +3,17 @@ var chai = require('chai')
   , should = chai.should();
 const request = require('supertest');
 const app = require('../app')
-  
+
  
-describe('GET /', function() {
-  it('respond with 200 status code', function(done) {
+describe('GET /status', () => {
+  it('respond with 200 status code', (done) => {
     request(app)
-      .get('/')
+      .get('/status')
       .expect(200, done);
   });
 });
 
 
-after('close server connection after tests', function() {
+after('close server connection after tests', () => {
   app.close()
 });
