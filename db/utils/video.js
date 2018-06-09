@@ -2,15 +2,14 @@ const Video = require('../models/video').Video
 
 const newVideo = (obj, callback) => {
   Video.sync().then(() => {
-    return Video.create({
+    return Video.findOrCreate({where: {
       name: obj.name,
       description: obj.description,
       url: obj.url,
       duration: obj.duration,
-    })
-    .then(() => Video.findOrCreate({where: {url: obj.url}}))
+    }})
     .spread((video, created) => {
-      callback({ 
+      callback && callback({ 
         video: video.get({plain: true}), 
         created: created,
       });
