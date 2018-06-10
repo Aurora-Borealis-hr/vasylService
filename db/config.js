@@ -1,6 +1,6 @@
 module.exports = {
   host: 'localhost',
-  dialect: 'mysql',
+  dialect: 'postgres',
   operatorsAliases: false,
 
   // pool: {

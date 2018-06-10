@@ -1,9 +1,9 @@
 const Sequelize = require('sequelize');
 const sequelize = require('../server').sequelize
 
-const VideoTag = sequelize.define('videoTag', {
+const tagVideo = sequelize.define('tagVideo', {
   videoId:{ type: Sequelize.INTEGER },
   tagId:{ type: Sequelize.INTEGER },
 });
 
-module.exports.VideoTag = VideoTag;
+module.exports.tagVideo = tagVideo;
