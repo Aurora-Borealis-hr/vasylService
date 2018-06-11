@@ -2,7 +2,7 @@ var chai = require('chai')
   , expect = chai.expect
   , should = chai.should();
 const request = require('supertest');
-const app = require('../app')
+const app = require('../index')
 
  
 describe('GET /status', () => {
