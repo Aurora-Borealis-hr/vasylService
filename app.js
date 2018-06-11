@@ -3,6 +3,7 @@ const bodyParser = require('body-parser');
 // const db = require('./mongodb');
 const videoDbHelper = require('./db/utils/video')
 const tagDbHelper = require('./db/utils/tag')
+const tagVideoDbHelper = require('./db/utils/tagVideo')
 require('dotenv').config();
 
 const app = express();
@@ -34,5 +35,15 @@ app.post('/tags', (req, res) => {
   }
   tagDbHelper.newTag(videoObject, (data) => res.status(201).send(data))
 })
+
+app.post('/videos/tags', (req, res) => {
+  const obj = {
+    videoId: req.body.videoId,
+    tagId: req.body.tagId,
+  }
+  tagVideoDbHelper.addTagToVideo(obj, (data) => res.status(201).send(data))
+})
+
+app.post('/tags/videos')
 
 module.exports = app.listen(process.env.PORT || process.env.NODE_ENV === 'test' ? 3001 : 3000);
