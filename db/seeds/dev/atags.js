@@ -15,10 +15,6 @@ const newBatch = () => {
 
 let count = 0;
 const seed = function(knex, Promise) {
-  // return knex('tags').del()
-    // .then(() => {
-      // })
-    // })
     count++
     return knex('tags').insert(newBatch()).then(() => {
       return count < 2000 ? seed(knex, Promise) : console.log('done')

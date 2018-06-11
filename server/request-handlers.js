@@ -18,7 +18,12 @@ const newVideo = (req, res) => {
 }
 
 const getVideo = (req, res) => {
-  videoDbHelper.getVideo(req.params.videoId, (data) => res.status(200).send(data))
+  videoDbHelper.getVideo(req.params.videoId, (data) => {
+    //TODO 
+    // get tags for this video id
+    // post a message
+    res.status(200).send(data)
+  })
 }
 
 const newTag = (req, res) => {
@@ -36,11 +41,8 @@ const tagVideo = (req, res) => {
   tagVideoDbHelper.addTagToVideo(obj, (data) => res.status(201).send(data))
 }
 
-
-// app.post('/tags/videos')
-
-module.exports.getVideo = getVideo;
 module.exports.status = status;
+module.exports.getVideo = getVideo;
 module.exports.newVideo = newVideo;
 module.exports.newTag = newTag;
 module.exports.tagVideo = tagVideo;
