@@ -4,8 +4,9 @@ module.exports = {
   development: {
     client: 'pg',
     connection: {
+      host : 'auroratube.cfkobq2rur3i.us-east-1.rds.amazonaws.com',
       database: 'auroratube',
-      user:     'postgres',
+      user:     'root',
       password: 'password'
     },
     migrations: {
@@ -18,7 +19,7 @@ module.exports = {
   },
 
   production: {
-    client: 'postgresql',
+    client: 'pg',
     connection: {
       database: 'my_db',
       user:     'username',
@@ -33,3 +34,22 @@ module.exports = {
     }
   }
 };
+
+
+// module.exports = {
+//   development: {
+//     client: 'mysql',
+//     connection: {
+//       database: 'auroratube',
+//       user:     'root',
+//       password: 'password'
+//     },
+//     migrations: {
+//       directory: './db/migrations'
+//     },
+//     seeds: {
+//       directory: './db/seeds/dev'
+//     },
+//     useNullAsDefault: true
+//   },
+// }
