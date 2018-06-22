@@ -1,18 +1,21 @@
 const knex = require('knex');
 var faker = require('faker');
 
+var numberOfVideos = require('./bvideos').numberOfRecords;
+var numberOfTags = require('./atags').numberOfRecords;
+
 var randomInRange = (num) => {
 	return Math.ceil(Math.random() * num)
 }
 
+var numberOfRecords = 1000000
+
 const newBatch = () => {
   var array = []
-  for( i = 0; i < 1000; i++){
+  for( i = 0; i < 5000; i++){
     var obj = {
-      videoid: randomInRange(2000000),
-      tagid: randomInRange(2000000),
-      createdAt: knex.raw('CURRENT_TIMESTAMP'),
-      updatedAt: knex.raw('CURRENT_TIMESTAMP') 
+      videoid: randomInRange(numberOfVideos),
+      tagid: randomInRange(numberOfTags),
     }
     array.push(obj)
   }
@@ -21,9 +24,9 @@ const newBatch = () => {
 
 let count = 0;
 const seed = function(knex, Promise) {
-    count++
+    count+= 5000;
     return knex('tagvideo').insert(newBatch()).then(() => {
-      return count < 3000 ? seed(knex, Promise) : console.log('done')
+      return count < numberOfRecords ? seed(knex, Promise) : console.log('finished seeding tag ideo join table')
     })  
 };
 

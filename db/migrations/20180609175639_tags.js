@@ -4,8 +4,8 @@ exports.up = function(knex, Promise) {
     knex.schema.createTable('tags', (table) => {
       table.increments('id').primary();
       table.string('name');
-      table.timestamp('createdAt');
-      table.timestamp('updatedAt');
+      table.timestamp('created_at').defaultTo(knex.fn.now())
+      table.timestamp('updated_at').defaultTo(knex.fn.now())
     }),
     knex.schema.createTable('videos', (table) => {
       table.increments('id').primary();
@@ -13,8 +13,8 @@ exports.up = function(knex, Promise) {
       table.string('description', 1000);
       table.string('url');
       table.integer('duration');
-      table.timestamp('createdAt');
-      table.timestamp('updatedAt');
+      table.timestamp('created_at').defaultTo(knex.fn.now())
+      table.timestamp('updated_at').defaultTo(knex.fn.now())
     }),
     knex.schema.createTable('tagvideo', (table) => {
       table.increments('id').primary();
@@ -22,8 +22,8 @@ exports.up = function(knex, Promise) {
         .references('videos.id');
       table.integer('tagid').unsigned()
         .references('tags.id');
-      table.timestamp('createdAt');
-      table.timestamp('updatedAt');
+      table.timestamp('created_at').defaultTo(knex.fn.now())
+      table.timestamp('updated_at').defaultTo(knex.fn.now())
     })
   ]);
 };

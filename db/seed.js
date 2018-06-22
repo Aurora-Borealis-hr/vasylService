@@ -1,8 +1,8 @@
 var knex = require('knex')({
   client: 'mysql',
   connection: {
-    host : '127.0.0.1',
-    user : 'postgres',
+    host : 'auroratube.cfkobq2rur3i.us-east-1.rds.amazonaws.com',
+    user : 'root',
     password : 'password',
     database : 'auroratube'
   }
