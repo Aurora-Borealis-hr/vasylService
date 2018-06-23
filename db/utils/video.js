@@ -1,4 +1,5 @@
 const Video = require('../models/video').Video
+const knex = require('../server.js').knex
 
 const newVideo = (obj, callback) => {
   Video.sync().then(() => {
@@ -18,13 +19,10 @@ const newVideo = (obj, callback) => {
 }
 
 const getVideo = (id, callback) => {
-  Video.findOne({
-    where: {
-      id: id,
-    }
-  }).then(data => callback(data.dataValues))
+  knex('videos').where({
+    id: id
+  }).select().then(data => callback(data))
 }
-
 
 module.exports.newVideo = newVideo;
 module.exports.getVideo = getVideo;

@@ -8,7 +8,7 @@ const newBatch = () => {
   var array = []
   for( i = 0; i < 5000 ; i++){
     array.push({
-      name: faker.random.word(), 
+      name: faker.lorem.word(), 
     })
   }
   return array;

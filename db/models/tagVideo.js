@@ -7,3 +7,6 @@ const tagVideo = sequelize.define('tagVideo', {
 });
 
 module.exports.tagVideo = tagVideo;
+
+const Knex = require('knex');
+const knex = require('../server').knex
