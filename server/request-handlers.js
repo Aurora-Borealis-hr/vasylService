@@ -18,11 +18,10 @@ const newVideo = (req, res) => {
 }
 
 const getVideo = (req, res) => {
-  videoDbHelper.getVideo(req.params.videoId, (data) => {
-    //TODO 
-    // get tags for this video id
-    // post a message
-    res.status(200).send(data)
+  videoDbHelper.getVideo(req.params.videoId, (videoObj) => {
+    tagVideoDbHelper.getTagsForVideo(req.params.videoId, (tagsids) => {
+      res.status(200).send('123')
+    })
   })
 }
 
@@ -41,8 +40,16 @@ const tagVideo = (req, res) => {
   tagVideoDbHelper.addTagToVideo(obj, (data) => res.status(201).send(data))
 }
 
+const getTagsForVideo = (req, res) => {
+  tagVideoDbHelper.getTagsForVideo(req.params.videoId, (data) => res.status(200).send(data) )
+}
+
+
+  
+
 module.exports.status = status;
 module.exports.getVideo = getVideo;
 module.exports.newVideo = newVideo;
 module.exports.newTag = newTag;
 module.exports.tagVideo = tagVideo;
+module.exports.getTagsForVideo = getTagsForVideo;
