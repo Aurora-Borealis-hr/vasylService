@@ -5,7 +5,8 @@ const getVideo = require('./request-handlers').getVideo;
 const status = require('./request-handlers').status;
 const newVideo = require('./request-handlers').newVideo;
 const newTag = require('./request-handlers').newTag;
-const tagVideo = require('./request-handlers').tagVideo
+const tagVideo = require('./request-handlers').tagVideo;
+const getTagsForVideo = require('./request-handlers').getTagsForVideo;
 
 router.get('/status', status);
 router.get('/videos/:videoId', getVideo);
@@ -16,6 +17,6 @@ router.post('/tags/videos', tagVideo);
 
 //TODO
 // router.get('/tags/:tagId/videos', getVideosForTag);
-// router.get('/videos/:tagId/tags', getTagsForVideo);
+router.get('/videos/:videoId/tags', getTagsForVideo);
 
 module.exports = router;
