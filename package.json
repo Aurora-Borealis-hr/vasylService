@@ -35,6 +35,7 @@
     "pg": "^7.4.3",
     "request": "^2.87.0",
     "sequelize": "^4.37.10",
+    "sqs-consumer": "^3.8.0",
     "sqs-producer": "^1.6.2"
   },
   "devDependencies": {
