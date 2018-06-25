@@ -2,6 +2,9 @@ const app = require('./app')
 const videoDbHelper = require('../db/utils/video')
 const tagDbHelper = require('../db/utils/tag')
 const tagVideoDbHelper = require('../db/utils/tagVideo')
+const axios = require('axios')
+const request = require('request')
+var nock = require('./nock');
 
 const status = (req, res) => {
   res.sendStatus(200);
@@ -20,7 +23,26 @@ const newVideo = (req, res) => {
 const getVideo = (req, res) => {
   videoDbHelper.getVideo(req.params.videoId, (videoObj) => {
     tagVideoDbHelper.getTagsForVideo(req.params.videoId, (tagsids) => {
-      res.status(200).send('123')
+      var tags = tagsids.map((el) => el.tagid)
+      tagDbHelper.getTags(tags, (data) => {     
+        var tagsstring = '';
+        data.forEach((el) => tagsstring += el.name + ',' );
+        var params = tagsstring.slice(0, tagsstring.length -1);
+        params = data.map((el) => el.name)
+        axios.get('http://adsService/ads', {
+          params: {
+            userId: req.cookies.userId,
+            tags: params
+          }
+        })
+        .then(function (response) {
+          res.send( {video: videoObj[0],ad:response.data})
+          ;
+        })
+        .catch(function (error) {
+          console.log(error);
+        });
+      })
     })
   })
 }

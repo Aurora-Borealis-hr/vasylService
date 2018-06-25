@@ -14,9 +14,6 @@ router.post('/videos', newVideo);
 router.post('/tags', newTag);
 router.post('/videos/tags', tagVideo);
 router.post('/tags/videos', tagVideo);
-
-//TODO
-// router.get('/tags/:tagId/videos', getVideosForTag);
 router.get('/videos/:videoId/tags', getTagsForVideo);
 
 module.exports = router;
