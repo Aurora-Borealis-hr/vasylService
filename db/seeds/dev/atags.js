@@ -1,7 +1,7 @@
 const knex = require('knex');
 var faker = require('faker');
 
-var numberOfRecords = 1000000
+var numberOfRecords = 2000000
 module.exports.numberOfRecords = numberOfRecords;
 
 const newBatch = () => {
