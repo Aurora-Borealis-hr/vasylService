@@ -1,7 +1,7 @@
 const knex = require('knex');
 var faker = require('faker');
 
-var numberOfRecords = 1000000;
+var numberOfRecords = 2000000;
 module.exports.numberOfRecords = numberOfRecords;
 
 const newBatch = () => {
@@ -12,6 +12,7 @@ const newBatch = () => {
       description: faker.lorem.paragraph(),
       url: faker.internet.url(),
       duration: faker.random.number(), 
+      channelId: Math.ceil(Math.random() * 500000),
     })
   }
   return array;

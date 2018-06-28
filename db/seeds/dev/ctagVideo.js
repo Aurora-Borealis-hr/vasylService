@@ -8,7 +8,7 @@ var randomInRange = (num) => {
 	return Math.ceil(Math.random() * num)
 }
 
-var numberOfRecords = 1000000
+var numberOfRecords = 6000000
 
 const newBatch = () => {
   var array = []

@@ -12,6 +12,7 @@ exports.up = function(knex, Promise) {
       table.string('name');
       table.string('description', 1000);
       table.string('url');
+      table.integer('channelId');
       table.integer('duration');
       table.timestamp('created_at').defaultTo(knex.fn.now())
       table.timestamp('updated_at').defaultTo(knex.fn.now())
