@@ -3,7 +3,6 @@ const videoDbHelper = require('../db/utils/video')
 const tagDbHelper = require('../db/utils/tag')
 const tagVideoDbHelper = require('../db/utils/tagVideo')
 const axios = require('axios')
-const request = require('request')
 var nock = require('./nock');
 
 const status = (req, res) => {

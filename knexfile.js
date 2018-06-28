@@ -4,9 +4,12 @@ module.exports = {
   development: {
     client: 'pg',
     connection: {
-      host : 'auroratube.cfkobq2rur3i.us-east-1.rds.amazonaws.com',
+      // host : 'auroratube.cfkobq2rur3i.us-east-1.rds.amazonaws.com',
       database: 'auroratube',
-      user:     'root',
+      // user:     'root',
+      host : 'localhost',
+      database: 'auroratube',
+      user:     'postgres',
       password: 'password'
     },
     migrations: {
