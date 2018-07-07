@@ -1,17 +1,11 @@
 // Update with your config settings.
 
+const dbConfig = require('./config/dbConfig');
+
 module.exports = {
   development: {
     client: 'pg',
-    connection: {
-      // host : 'auroratube.cfkobq2rur3i.us-east-1.rds.amazonaws.com',
-      database: 'auroratube',
-      // user:     'root',
-      host : 'localhost',
-      database: 'auroratube',
-      user:     'postgres',
-      password: 'password'
-    },
+    connection: dbConfig,
     migrations: {
       directory: './db/migrations'
     },
@@ -21,38 +15,5 @@ module.exports = {
     useNullAsDefault: true
   },
 
-  production: {
-    client: 'pg',
-    connection: {
-      database: 'my_db',
-      user:     'username',
-      password: 'password'
-    },
-    pool: {
-      min: 2,
-      max: 10
-    },
-    migrations: {
-      tableName: 'knex_migrations'
-    }
-  }
+  production: {}
 };
-
-
-// module.exports = {
-//   development: {
-//     client: 'mysql',
-//     connection: {
-//       database: 'auroratube',
-//       user:     'root',
-//       password: 'password'
-//     },
-//     migrations: {
-//       directory: './db/migrations'
-//     },
-//     seeds: {
-//       directory: './db/seeds/dev'
-//     },
-//     useNullAsDefault: true
-//   },
-// }
