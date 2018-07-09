@@ -1,12 +1,14 @@
 config:
-  target: 'https://artillery.io'
+  # target: 'http://localhost:8080'
+  target: 'http://ec2-54-196-171-242.compute-1.amazonaws.com'
   phases:
     - duration: 10
-      arrivalRate: 20
-  defaults:
-    headers:
-      x-my-service-auth: '987401838271002188298567'
+      arrivalRate: 100
+      # rampTo: 100
+  # defaults:
+    # headers:
+    #   x-my-service-auth: '987401838271002188298567'
 scenarios:
   - flow:
     - get:
-        url: "/docs"
+        url: "/videos/123456"
