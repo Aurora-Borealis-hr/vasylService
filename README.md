@@ -1,7 +1,6 @@
 # Video Prep - Delivery Service
 
 ## Usage
-
-  `*npm i
-  *npm run dev`
+```npm i
+npm run dev```
  
