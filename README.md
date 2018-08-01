@@ -29,3 +29,8 @@ npm run dev
 ![average video duration for channedId](https://s3-us-west-1.amazonaws.com/bucket13245/AverageDuration.gif)
 ### Most popular videos
 ![most popular](https://s3-us-west-1.amazonaws.com/bucket13245/MostPopular.gif)
+
+
+## Stress test
+
+![stress test]https://s3-us-west-1.amazonaws.com/bucket13245/StressTest.png)
