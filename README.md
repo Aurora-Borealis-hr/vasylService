@@ -16,7 +16,12 @@ npm run dev
 ```
 
 
-# Architecture
+## Service Architecture
 
 ![architecture diagram](https://s3-us-west-1.amazonaws.com/bucket13245/Video+service+diagram1.png)
 
+
+
+https://s3-us-west-1.amazonaws.com/bucket13245/browsers.gif
+https://s3-us-west-1.amazonaws.com/bucket13245/AverageDuration.gif
+https://s3-us-west-1.amazonaws.com/bucket13245/MostPopular.gif
