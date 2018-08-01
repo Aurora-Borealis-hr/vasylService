@@ -34,3 +34,4 @@ npm run dev
 ## Stress test
 
 ![stress test](https://s3-us-west-1.amazonaws.com/bucket13245/StressTest.png)
+![stress test](https://s3-us-west-1.amazonaws.com/bucket13245/StressTest2.png)
