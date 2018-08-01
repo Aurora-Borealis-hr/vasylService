@@ -21,7 +21,11 @@ npm run dev
 ![architecture diagram](https://s3-us-west-1.amazonaws.com/bucket13245/Video+service+diagram1.png)
 
 
+## Analytics
 
+### Browsers
 ![browsers chart](https://s3-us-west-1.amazonaws.com/bucket13245/browsers.gif)
+### Average duration for a channelId
 ![average video duration for channedId](https://s3-us-west-1.amazonaws.com/bucket13245/AverageDuration.gif)
+### Most popular videos
 ![most popular](https://s3-us-west-1.amazonaws.com/bucket13245/MostPopular.gif)
