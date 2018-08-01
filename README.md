@@ -1,4 +1,4 @@
-# Video Prep - Delivery Service
+## Video Service
 
 
 ### Technologies
