@@ -25,7 +25,7 @@ npm run dev
 
 ### Browsers
 ![browsers chart](https://s3-us-west-1.amazonaws.com/bucket13245/browsers.gif)
-### Average duration for a channelId
+### Average duration for a channel id
 ![average video duration for channedId](https://s3-us-west-1.amazonaws.com/bucket13245/AverageDuration.gif)
 ### Most popular videos
 ![most popular](https://s3-us-west-1.amazonaws.com/bucket13245/MostPopular.gif)
