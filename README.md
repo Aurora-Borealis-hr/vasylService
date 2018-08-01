@@ -14,3 +14,9 @@
 npm i
 npm run dev
 ```
+
+
+# Architecture
+
+![architecture diagram](https://s3-us-west-1.amazonaws.com/bucket13245/Video+service+diagram1.png)
+
