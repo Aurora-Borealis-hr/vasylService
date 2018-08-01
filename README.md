@@ -22,6 +22,6 @@ npm run dev
 
 
 
-https://s3-us-west-1.amazonaws.com/bucket13245/browsers.gif
-https://s3-us-west-1.amazonaws.com/bucket13245/AverageDuration.gif
-https://s3-us-west-1.amazonaws.com/bucket13245/MostPopular.gif
+![browsers chart](https://s3-us-west-1.amazonaws.com/bucket13245/browsers.gif)
+![average video duration for channedId](https://s3-us-west-1.amazonaws.com/bucket13245/AverageDuration.gif)
+![most popular](https://s3-us-west-1.amazonaws.com/bucket13245/MostPopular.gif)
